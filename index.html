@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--all 2 css files and js file are linked with link and script src, always do first after naming title-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Michael Too</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Michael Too</div>
+
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <!--js function to open and close menu.-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section-pic-container">
+            <img src="assets\profile-pic.png" alt="Me" />
+        </div>
+
+        <div class="section-text">
+            <p class="section-text-p1">Hi, I'm</p>
+            <h1 class="title">Michael Too</h1>
+            <p class="section-text-p2">Backend Developer</p>
+
+            <div class="button-container">
+                <button class="btn btn-resume-2" onclick="window.open('assets\\resume-example.pdf')">My Resume</button>
+
+                <button class="btn btn-contact-info-1" onclick="location.href='./#contact' ">Contact Info</button>
+            </div>
+
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/michaeltwo/' ">
+
+                <img src="./assets/github.png" alt="My Github" class="icon"
+                    onclick="location.href='https://www.github.com/zippy0626/' ">
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
