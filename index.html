@@ -1,74 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--all 2 css files and js file are linked with link and script src, always do first after naming title-->
+  <!--all 2 css files and js file are linked with link and script src, always do first after naming title-->
 
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="desktop-nav">
-        <div class="logo">Michael Too</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+      <div class="logo">Michael Too</div>
+      <div>
+        <ul class="nav-links">
+          <li><a class="nav-a" href="#about">About</a></li>
+          <li><a class="nav-a" href="#experience">Experience</a></li>
+          <li><a class="nav-a" href="#projects">Projects</a></li>
+          <li><a class="nav-a" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="night-mode-btn-container">
+
+      </div>
+    
     </nav>
 
     <nav id="hamburger-nav">
-        <div class="logo">Michael Too</div>
-
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <!--js function to open and close menu.-->
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+      <div class="logo">Michael Too</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <!--js function to open and close menu.-->
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li>
+            <a href="#about" onclick="toggleMenu()">About</a>
+          </li>
+          <li>
+            <a href="#experience" onclick="toggleMenu()">Experience</a>
+          </li>
+          <li>
+            <a href="#projects" onclick="toggleMenu()">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+          </li>
+        </div>
+      </div>
     </nav>
 
     <section id="profile">
+      <div class="section-pic-container">
+        <img src="assets\profile-pic.png" alt="Me" />
+      </div>
+      <div class="section-text">
+        <p class="section-text-p1">Hi, I'm</p>
+        <h1 class="title">Michael Too</h1>
+        <p class="section-text-p2">Backend Developer</p>
+
+        <div class="button-container">
+          <button
+            class="btn btn-resume-2"
+            onclick="window.open('assets\\resume-example.pdf')">
+            My Resume
+          </button>
+          <button
+            class="btn btn-contact-info-1"
+            onclick="location.href='./#contact' ">
+            Contact Info
+          </button>
+        </div>
+
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My Linkedin Profile"
+            class="icon profile-icon"
+            onclick="location.href='https://www.linkedin.com/in/michaeltwo/' " />
+          <img
+            src="./assets/github.png"
+            alt="My Github"
+            class="icon profile-icon github-icon"
+            onclick="location.href='https://www.github.com/zippy0626/' " />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      
+      <p class="section-text-p1">Get to know more</p>
+
+      <h1 class="title">About Me</h1>
+
+      <div class="section-container">
+
         <div class="section-pic-container">
-            <img src="assets\profile-pic.png" alt="Me" />
+          
+          <img
+            src="./assets/about-pic.png"
+            alt="profile-picture"
+            class="about-pic" />
+
         </div>
 
-        <div class="section-text">
-            <p class="section-text-p1">Hi, I'm</p>
-            <h1 class="title">Michael Too</h1>
-            <p class="section-text-p2">Backend Developer</p>
+        <div class="about-container">
+          
+          <div class="about-details-container">
+            
+            <div class="details-container">
+              
+              <img
+                src="./assets/experience.png"
+                alt="experience-icon"
+                class="icon" />
 
-            <div class="button-container">
-                <button class="btn btn-resume-2" onclick="window.open('assets\\resume-example.pdf')">My Resume</button>
+              <h3>Experience</h3>
 
-                <button class="btn btn-contact-info-1" onclick="location.href='./#contact' ">Contact Info</button>
+              <p>
+                X+ years <br />
+                Backend Developer
+              </p>
+
             </div>
 
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/michaeltwo/' ">
+            <div class="details-container">
+              
+              <img
+                src="./assets/education.png"
+                alt="education-icon"
+                class="icon" />
 
-                <img src="./assets/github.png" alt="My Github" class="icon"
-                    onclick="location.href='https://www.github.com/zippy0626/' ">
+              <h3>Education</h3>
+
+              <p>
+                B.S. Mathematics <br />
+                Baruch College
+              </p>
+
             </div>
+
+          </div>
+
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Reiciendis quis modi doloribus eius odio ex magni quo voluptate
+              corrupti voluptatibus consequatur blanditiis molestias ullam
+              laudantium eveniet ratione assumenda, incidunt voluptatum.
+            </p>
+          </div>
+
         </div>
+
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="arrow-icon"
+        class="icon arrow"
+        onclick="location.href='./#experience' " />
+
+    </section>
+
+    <section id="experience">
+      <p class="section-text-p1">Explore my</p>
+      <h1 class="title">Experience</h1>
+      <div class="o-container">
+        <div class="e-container">
+          <div class="experience-box-1">
+            <h3 class="box-text">Languages + Skills</h3>
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <div class="bar-container">
+                <p class="percentage">56%</p>
+                <div class="border">
+                  <div class="bar bar-1"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <div class="bar-container">
+                <p class="percentage">78%</p>
+                <div class="border">
+                  <div class="bar bar-2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <div class="bar-container">
+                <p class="percentage">65%</p>
+                <div class="border">
+                  <div class="bar bar-3"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <div class="bar-container">
+                <p class="percentage">50%</p>
+                <div class="border">
+                  <div class="bar bar-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-box-2">
+            <h3 class="box-text">Work Experience</h3>
+            
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Company</h3>
+                  <p>Position</p>
+                </div>
+              </article>
+              <div class="date"> 
+                <p>Jan 2020 - Jan 2022</p>
+              </div>
+            </div>
+
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Company</h3>
+                  <p>Position</p>
+                </div>
+              </article>
+
+              <div class="date"> 
+                <p>Jan 2020 - Jan 2022</p>
+              </div>
+            </div>
+
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Company</h3>
+                  <p>Position</p>
+                </div>
+              </article>
+
+              <div class="date"> 
+                <p>Jan 2020 - Jan 2022</p>
+              </div>
+            </div>
+
+            <div class="skills-box">
+              <article>
+                <div>
+                  <h3>Company</h3>
+                  <p>Position</p>
+                </div>
+              </article>
+
+              <div class="date"> 
+                <p>Jan 2020 - Jan 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow" onclick="location.href='./#projects' ">
+    </section>
+
+    <section id="projects">
+      <p class="section-text-p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="o-p-container">
+        <div class="p-container">
+          <div class="p-image-container">
+            <img src="./assets/p-image.webp" alt="My Project" class="p-image-1">
+          </div>
+
+          <div class="p-title-button-container">
+            <h2 class="p-title">RAG System</h2>
+            <div class="p-button-container">
+              <div class="p-button"><a class="p-button-1" href="https://github.com/zippy0626/new_rag">Github Link</a></div>
+              <!-- <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div></div> -->
+            </div>
+          </div>
+        </div>
+        <div class="p-container">
+          <div class="p-image-container">
+            <img src="./assets/Golden_cookie.png" alt="My Project" class="p-image-2">
+          </div>
+
+          <div class="p-title-button-container">
+            <h2 class="p-title">Cookie Bot</h2>
+            <div class="p-button-container">
+              <div class="p-button"><a class="p-button-1" href="https://github.com/zippy0626/cookiebot">Github Link</a></div>
+              <!-- <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div></div> -->
+            </div>
+          </div>
+        </div>
+        <div class="p-container">
+          <div class="p-image-container">
+            <img src="./assets/p-image.webp" alt="My Project" class="p-image-3">
+          </div>
+
+          <div class="p-title-button-container">
+            <h2 class="p-title">Project 1</h2>
+            <div class="p-button-container">
+              <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div>
+              <!-- <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow" onclick="location.href='./#contact' ">
     </section>
 
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>

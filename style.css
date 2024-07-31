@@ -30,7 +30,7 @@ a,
 
 /* DESKTOP NAV */
 
-/* changes ALL navs and navlinks to make a flexbox */
+/* changes ALL navs and navlinks to make a flex */
 nav,
 .nav-links {
   display: flex;
@@ -45,7 +45,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 a {
@@ -55,12 +55,12 @@ a {
 }
 
 /* hover element to links */
-a:hover {
+.nav-a:hover {
   color: grey;
   text-decoration: underline;
   text-underline-offset: 1.5rem;
   text-decoration-color: grey;
-  text-decoration-thickness: 0.5px;
+  text-decoration-thickness: .1px;
 }
 
 .logo {
@@ -165,7 +165,8 @@ a:hover {
 
 /* SECTIONS */
 
-section {
+/* section template */
+section { 
   padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
@@ -183,14 +184,19 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 75vh;
+  height: 80vh;
 }
 
 .section-pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   margin: auto 0;
+  transition: all 300ms ease;
+}
+
+.section-pic-container:hover {
+  transform: scale(1.025);
 }
 
 .section-text {
@@ -203,14 +209,15 @@ section {
 }
 
 .section-text-p1 {
-  font-size: 1.75rem;
-  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .section-text-p2 {
   font-size: 1.75rem;
   margin-top: .5rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .title {
@@ -221,6 +228,7 @@ section {
 #socials-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 1.5rem;
   gap: 1rem;
 }
@@ -230,6 +238,15 @@ section {
 .icon {
   cursor: pointer;
   height: 2.5rem;
+  transition: all 200ms ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.05);
+}
+
+.github-icon {
+  margin-bottom: 1px;
 }
 
 /* BUTTONS */
@@ -259,12 +276,323 @@ section {
   cursor: pointer;
 }
 
-.btn-resume-2, .btn-contact-info-1 {
+.btn-resume-2,
+.btn-contact-info-1 {
   background: none;
 }
 
-.btn-resume-2:hover, .btn-contact-info-1:hover {
-  background: black;
-  border: black .12rem solid;
+.btn-resume-2:hover,
+.btn-contact-info-1:hover {
+  transition: all 400ms ease;
+  background: rgba(0,0,0,.7);
+  border: rgba(0,0,0,.6) .1rem solid;
   color: white;
+  transform: scale(1.025);
+}
+
+/* ABOUT */
+
+#about {
+  position: relative;
+}
+
+.about-details-container {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-container,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  /* it stays on one position on the page*/
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) .125rem solid;
+  border-color: whitesmoke;
+  text-align: center;
+  transition: all 150ms ease;
+}
+
+.details-container:hover {
+  transform: scale(1.025);
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section-pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE */
+
+/* experience wasn't relative so the arrow icon moved to the first parent section which had relative position? */
+#experience {
+  position: relative;
+}
+
+.o-container {
+  display: flex;
+  margin-top: 4rem;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.e-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  width: 1800px;
+}
+
+.experience-box-1 {
+  display: flex;
+  width: auto;
+  height: auto;
+  border: whitesmoke .15rem solid;
+  border-radius: 2rem;
+  padding: 1rem;
+  flex-direction: column;
+  transition: all 200ms ease;
+}
+
+.skills-box {
+  transition: all 300ms ease;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  margin-right: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.experience-box-2 {
+  display: flex;
+  width: 450px;
+  height: auto;
+  border: whitesmoke .15rem solid;
+  border-radius: 2rem;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.experience-box-2 article {
+  margin: 0;
+}
+
+.box-text {
+  text-align: center;
+  font-size: 1.25rem;
+  width: fit-content;
+  height: fit-content;
+  align-self:flex-start;
+  margin: 1rem auto;
+}
+
+.skills-box:hover {
+  transform: scale(1.005);
+}
+
+article {
+  display: flex;
+  height: fit-content;
+  align-self: center;
+  margin-left: 3rem;
+}
+
+article:hover {
+  cursor: default;
+}
+
+.border {
+  border: .1rem black solid;
+  height: 1rem;
+  width: 25rem;
+  border-radius: 2rem;
+  margin-top: .1rem;
+}
+
+.bar-container {
+  display: flex;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  height: 1rem;
+  width: 50%;
+  background-color: rgba(0,0,0,.7);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.percentage {
+  color: black;
+  margin-left: .5rem;
+  width: auto;
+  height: auto;
+  margin-right: .5rem;  
+}
+
+.bar-1 {
+  width: 56%;
+}
+
+.bar-2 {
+  width: 78%;
+}
+
+.bar-3 {
+  width: 65%;
+}
+
+.bar-4 {
+  width: 50%;
+}
+
+/* .bar-container:hover .bar {
+  transition: all 150ms ease;
+  background-color: white;
+}
+
+.bar-container:hover .percentage {
+  transition: all 150ms ease;
+  color: black;
+}
+
+.bar-container:hover .border {
+  transition: all 200ms ease;
+  background-color: black;
+} */
+
+.parallax {
+  /* The image used */
+  background-image: url("./assets/background.jpg");
+
+  /* Set a specific height */
+  min-height: 1000px;
+  width: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* PROJECTS */
+
+#projects {
+  position: relative;
+}
+
+.o-p-container {
+  display: flex;
+  justify-self: center;
+  width: auto;
+  margin-top: 2.5rem;
+  gap: 2rem;
+}
+
+.p-container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  border: .15rem whitesmoke solid;
+  border-radius: 3rem;
+  width: 350px;
+  height: 450px;
+  transition: all 200ms ease;
+}
+
+.p-container:hover {
+  transform: scale(1.005);
+  /* box-shadow: 2px 2px 5px grey;  */
+  /* first two values are x and y, last one is blur of shadow */
+}
+
+.p-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: auto;
+  height: auto;
+}
+
+.p-image-container img{
+  width: 275px;
+  height: 275px;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* .p-image-container .p-image-2 {
+  width: 100px;
+  height: 100px;
+} */
+
+.p-title-button-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 300px;
+  gap: 1.5rem;
+}
+
+.p-title {
+  text-align: center;
+  margin-bottom: .25rem;
+}
+
+.p-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.p-button-1 {
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  padding: 1.15rem;
+  border: .125rem whitesmoke solid;
+  border-radius: 2rem;
+  transition: all 200ms ease;
+}
+
+.p-button-1:hover {
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  border-color: black;
 }
