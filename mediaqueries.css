@@ -6,5 +6,10 @@
 
     #hamburger-nav {
         display: flex;
+        justify-content: space-around;
+    }
+
+    .hamburger-menu {
+        align-self: center;
     }
 }

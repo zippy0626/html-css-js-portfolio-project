@@ -20,29 +20,60 @@ p {
   color: rgb(85, 85, 85);
 }
 
-/* TRANSITIONS */
+/* transitios */
 
 /*- makes so that the change in clicking is not instantaneous */
 a,
 .btn {
-  transition: all 300ms ease;
+  transitio: all 300ms ease;
 }
 
 /* DESKTOP NAV */
 
 /* changes ALL navs and navlinks to make a flex */
-nav,
-.nav-links {
+
+#desktop-nav {
   display: flex;
+  flex-direction: row;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
 }
 
-nav {
-  justify-content: space-around;
+.nav-container {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  height: 15vh;
+  justify-content: space-around;
+  width: 55%;
+}
+
+#nm-btn-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container {
+  width: 30px;
+  height: 30px;
+  border: .11rem black solid;
+  border-radius: 2rem;
+  background-color: black;
+  transitio: all 300ms ease;
+}
+
+.btn-container:hover {
+  transform: scale(1.05);
+  box-shadow: 1.5px 1.5px 5px;
 }
 
 .nav-links {
+  display:flex;
+  flex-direction: row;
   gap: 2rem;
   list-style: none;
   font-size: 1.25rem;
@@ -97,7 +128,7 @@ a {
   width: 100%;
   height: 3px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transitio: all 300ms ease-in-out;
 }
 
 .menu-links {
@@ -105,10 +136,11 @@ a {
   top: 100%;
   right: 0;
   background: white;
+  border-radius: 2rem;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transitio: all 0.3 ease-in-out;
 }
 
 .menu-links a {
@@ -118,7 +150,7 @@ a {
   font-size: 1.5em;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transitio: all 0.3 ease-in-out;
 }
 
 /* can delete later if want to  */
@@ -128,7 +160,7 @@ a {
   text-underline-offset: 1rem;
   text-decoration-color: grey;
   text-decoration-thickness: 0.5px;
-  transition: all 300ms ease;
+  transitio: all 300ms ease;
 }
 
 .menu-links li {
@@ -192,7 +224,14 @@ section {
   height: 350px;
   width: 350px;
   margin: auto 0;
-  transition: all 300ms ease;
+  transitio: all 300ms ease;
+  border: .12rem gainsboro solid;
+  border-radius: 11rem;
+  background: none;
+}
+
+.section-pic-container .me-pic {
+  border-radius: 50%;
 }
 
 .section-pic-container:hover {
@@ -238,7 +277,7 @@ section {
 .icon {
   cursor: pointer;
   height: 2.5rem;
-  transition: all 200ms ease;
+  transitio: all 300ms ease;
 }
 
 .profile-icon:hover {
@@ -259,33 +298,33 @@ section {
 
 .btn {
   font-weight: 600;
-  transition: all 400ms ease;
+  transitio: all 300ms ease;
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
   font-size: .9rem;
 }
 
-.btn-resume-2,
-.btn-contact-info-1 {
+.btn-resume,
+.btn-contact-info {
   border: whitesmoke .12rem solid;
 }
 
-.btn-resume-2:hover,
-.btn-contact-info-1:hover {
+.btn-resume:hover,
+.btn-contact-info:hover {
   cursor: pointer;
 }
 
-.btn-resume-2,
-.btn-contact-info-1 {
+.btn-resume,
+.btn-contact-info {
   background: none;
 }
 
-.btn-resume-2:hover,
-.btn-contact-info-1:hover {
-  transition: all 400ms ease;
-  background: rgba(0,0,0,.7);
-  border: rgba(0,0,0,.6) .1rem solid;
+.btn-resume:hover,
+.btn-contact-info:hover {
+  transitio: all 300ms ease;
+  background: rgba(0,0,0,.8);
+  border: rgba(0,0,0,.6) .12rem solid;
   color: white;
   transform: scale(1.025);
 }
@@ -313,7 +352,7 @@ section {
 }
 
 .about-pic {
-  border-radius: 2rem;
+  border-radius: 50%;
 }
 
 .arrow {
@@ -331,7 +370,7 @@ section {
   border: rgb(53, 53, 53) .125rem solid;
   border-color: whitesmoke;
   text-align: center;
-  transition: all 150ms ease;
+  transitio: all 300ms ease;
 }
 
 .details-container:hover {
@@ -354,14 +393,17 @@ section {
 /* experience wasn't relative so the arrow icon moved to the first parent section which had relative position? */
 #experience {
   position: relative;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .o-container {
   display: flex;
   margin-top: 4rem;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
   justify-content: center;
+  align-items: center;
 }
 
 .e-container {
@@ -369,8 +411,101 @@ section {
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
-  width: 1800px;
+  width: 1200px;
 }
+
+/* Legend Box */
+
+.e-container-2 {
+  display: flex;
+  width: auto;
+  padding: 3rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  border: .12rem whitesmoke solid;
+  border-radius: 2rem;
+}
+
+#my-pie-chart {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: .15rem whitesmoke solid;
+  box-shadow: 2px 2px 5px grey;
+  /* conic-gradient color, which% to new% on the graph, no comma at end of rgb values */
+  background: conic-gradient(
+    rgb(0,0,0, .8) 0% 70%, 
+    rgb(0,0,0, .7) 70% 80%, 
+    rgb(0,0,0, .6) 80% 90%, 
+    rgb(0,0,0, .5) 90% 95%, 
+    rgb(0,0,0, .4) 95% 100%
+  );
+}
+
+#my-pie-chart:hover {
+  transform: scale(1.0075);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 200px;
+  padding: .67rem;
+  background-color: white;
+  border: .12rem whitesmoke solid;
+  border-radius: 2rem;
+  align-self: center;
+  text-align: center;
+}
+
+.legend p {
+  color: rgb(85, 85, 85);
+}
+
+.legend-title {
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.legend-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .4rem;
+}
+
+.mini-color {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  align-self: center;
+  border-radius: 2rem;
+}
+
+.mini-1 {
+  background-color: rgb(0,0,0, .8);
+}
+
+.mini-2 {
+  background-color: rgb(0,0,0, .7);
+}
+
+.mini-3 {
+  background-color: rgb(0,0,0, .6);
+}
+
+.mini-4 {
+  background-color: rgb(0,0,0, .5);
+}
+
+.mini-5 {
+  background-color: rgb(0,0,0, .4);
+}
+
+/* Experience */
 
 .experience-box-1 {
   display: flex;
@@ -380,11 +515,11 @@ section {
   border-radius: 2rem;
   padding: 1rem;
   flex-direction: column;
-  transition: all 200ms ease;
+  transitio: all 300ms ease;
 }
 
 .skills-box {
-  transition: all 300ms ease;
+  transitio: all 300ms ease;
   display: flex;
   flex-direction: row;
   margin-bottom: 1.5rem;
@@ -392,6 +527,17 @@ section {
   align-items: center;
   justify-content: space-around;
   gap: 1rem;
+}
+
+.skills-box-1 {
+  margin-left: .2rem;
+  margin-top: .5rem;
+}
+
+.skills-box-1 article {
+  display: flex;
+  width: auto;
+  margin-top: .5rem;
 }
 
 .experience-box-2 {
@@ -424,6 +570,8 @@ section {
 article {
   display: flex;
   height: fit-content;
+  width: 7rem;
+  justify-content: flex-start;
   align-self: center;
   margin-left: 3rem;
 }
@@ -463,50 +611,35 @@ article:hover {
 }
 
 .bar-1 {
-  width: 56%;
+  width: 55%;
 }
 
 .bar-2 {
-  width: 78%;
+  width: 30%;
 }
 
 .bar-3 {
-  width: 65%;
+  width: 20%;
 }
 
 .bar-4 {
-  width: 50%;
+  width: 5%;
 }
 
 /* .bar-container:hover .bar {
-  transition: all 150ms ease;
+  transitio: all 150ms ease;
   background-color: white;
 }
 
 .bar-container:hover .percentage {
-  transition: all 150ms ease;
+  transitio: all 150ms ease;
   color: black;
 }
 
 .bar-container:hover .border {
-  transition: all 200ms ease;
+  transitio: all 200ms ease;
   background-color: black;
 } */
-
-.parallax {
-  /* The image used */
-  background-image: url("./assets/background.jpg");
-
-  /* Set a specific height */
-  min-height: 1000px;
-  width: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /* PROJECTS */
 
@@ -530,7 +663,7 @@ article:hover {
   border-radius: 3rem;
   width: 350px;
   height: 450px;
-  transition: all 200ms ease;
+  transitio: all 300ms ease;
 }
 
 .p-container:hover {
@@ -543,6 +676,7 @@ article:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: .12rem;
   margin-left: 2rem;
   margin-right: 2rem;
   width: auto;
@@ -556,6 +690,7 @@ article:hover {
   margin-top: 2rem;
   margin-bottom: 1.2rem;
 }
+
 
 /* .p-image-container .p-image-2 {
   width: 100px;
@@ -588,11 +723,236 @@ article:hover {
   padding: 1.15rem;
   border: .125rem whitesmoke solid;
   border-radius: 2rem;
-  transition: all 200ms ease;
+  transitio: all 300ms ease;
 }
 
 .p-button-1:hover {
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.7);
   color: white;
   border-color: black;
+}
+
+/* CONTACT */
+
+#contact {
+  height: 70vh;
+}
+
+.o-c-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-submit-text-container {
+  border: .125rem whitesmoke solid;
+  border-radius: 2rem;
+  width: 500px;
+  height: 500px;
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-textarea {
+  display: flex;
+  border: none;
+  outline: none;
+  width: 450px;
+  height: 450px;
+  justify-content: flex-start;
+  resize: none;
+  font-size: 1rem;
+}
+
+.error-message, .confirm-message {
+  display: none;
+}
+
+.c-email-submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.email-field {
+  display: flex;
+  border: whitesmoke .125rem solid;
+  border-radius: 2rem;
+  height: 2rem;
+  padding: .3rem;
+  padding-left: 1rem;
+  outline: none;
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Dark Mode: this is a toggle class, use this class to select elements you want and change their properties*/
+
+.dark-mode {
+  color: rgb(225,225,255);
+  border-color: rgb(200, 200, 255);
+  background-color: black;
+  /* transition: all 300ms ease; */
+  backface-visibility: hidden;
+  /* ask him tomorrow why boxes show up */
+}
+
+.dark-mode .nav-a {
+  color: rgb(225,225,255);
+}
+
+.dark-mode .hamburger-icon span {
+  background-color: rgb(225,225,255);
+}
+
+.dark-mode .menu-links.open li a {
+  color: rgb(225,225,255);
+}
+
+.dark-mode .menu-links.open li a:hover {
+  color: rgb(225,225,255);
+  text-decoration: underline;
+  text-underline-offset: 1.5rem;
+  text-decoration-color: rgb(200, 200, 255);
+  text-decoration-thickness: .1px;
+}
+
+.dark-mode .btn-container {
+  background-color: rgb(225,225,255);
+  border-color: rgb(225,225,255);
+  box-shadow: rgb(200, 200, 255);
+}
+
+.dark-mode #socials-container img {
+  filter: invert(1);
+}
+
+.dark-mode .icon {
+  background: none;
+  filter: invert(1);
+}
+
+.dark-mode .btn-resume:hover {
+  background-color: rgb(225,225,255);
+  border-color: rgb(225,225,255);
+  color: black;
+}
+
+.dark-mode .btn-contact-info:hover {
+  background-color: rgb(225,225,255);
+  border-color: rgb(215,205,255);
+  color: black;
+}
+
+.dark-mode .bar {
+  background-color: rgb(225,225,255);
+}
+
+.p-image-container .dark-mode .p-image-1 img {
+  border: 1rem solid rgb(225,225,255);
+}
+
+.dark-mode .p-button-1:hover {
+  color: black;
+  background-color: rgb(225,225,255);
+  border-color: rgb(215,205,255);
+}
+
+.dark-mode .title {
+  color: rgb(200, 200, 255);
+}
+
+.dark-mode .section-pic-container img {
+  background-color: black;
+  border-radius: 11rem;
+  border-color: rgb(200, 200, 255);
+  clip-path: circle();
+  /* this makes an image a circle */
+}
+
+/* figure out how the selection of css works */
+.dark-mode .e-container .experience-box-1 h3 {
+  color: rgb(200, 200, 255);
+}
+
+.dark-mode .e-container .experience-box-2 h3 {
+  color: rgb(200, 200, 255);
+}
+
+.dark-mode .p-container h2 {
+  color: rgb(200, 200, 255);
+}
+
+.dark-mode .about-details-container h3 {
+  color: rgb(200, 200, 255);
+}
+
+.dark-mode .logo {
+  color: rgb(200, 200, 255);
+}
+
+.dark-mode .nav-a:hover {
+  color: rgb(200, 200, 255);
+  text-decoration-color: rgb(200, 200, 255);
+}
+
+.dark-mode .e-container-2 {
+  border-color: rgb(200, 200, 255);
+}
+
+.dark-mode #my-pie-chart {
+  background: conic-gradient(
+    rgba(174, 174, 255, 0.9) 0% 70%, 
+    rgba(170, 170, 255, 0.83) 70% 80%, 
+    rgba(170, 170, 255, 0.76) 80% 90%, 
+    rgba(170, 170, 255, 0.69) 90% 95%, 
+    rgba(170, 170, 255, 0.62) 95% 100%
+  );
+  border-color: rgb(190, 190, 255);
+}
+
+.dark-mode.legend p {
+  color: rgb(215,205,255);
+}
+
+.dark-mode .mini-1 {
+  background-color: rgba(174, 174, 255, 0.9);
+}
+
+.dark-mode .mini-2 {
+  background-color: rgba(170, 170, 255, 0.83);
+}
+
+.dark-mode .mini-3 {
+  background-color: rgba(170, 170, 255, 0.76);
+}
+
+.dark-mode .mini-4 {
+  background-color: rgba(170, 170, 255, 0.69);
+}
+
+.dark-mode .mini-5 {
+  background-color: rgb(190, 190, 255, .62);
+}
+
+.no-email-message {
+  display: none;
 }

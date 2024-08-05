@@ -8,24 +8,26 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Michael Too</div>
-      <div>
-        <ul class="nav-links">
-          <li><a class="nav-a" href="#about">About</a></li>
-          <li><a class="nav-a" href="#experience">Experience</a></li>
-          <li><a class="nav-a" href="#projects">Projects</a></li>
-          <li><a class="nav-a" href="#contact">Contact</a></li>
-        </ul>
+      <div class="nav-container">
+        <div class="logo">Michael Too</div>
+        <div>
+          <ul class="nav-links">
+            <li><a class="nav-a" href="#about">About</a></li>
+            <li><a class="nav-a" href="#experience">Experience</a></li>
+            <li><a class="nav-a" href="#projects">Projects</a></li>
+            <li><a class="nav-a" href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="night-mode-btn-container">
-
+      <div id="nm-btn-container">
+        <div class="btn-container" onclick="toggleDark()"></div>
       </div>
-    
     </nav>
 
     <nav id="hamburger-nav">
@@ -56,7 +58,7 @@
 
     <section id="profile">
       <div class="section-pic-container">
-        <img src="assets\profile-pic.png" alt="Me" />
+        <img src="./assets/myprofilepic.jpg" alt="Me" class="me-pic" />
       </div>
       <div class="section-text">
         <p class="section-text-p1">Hi, I'm</p>
@@ -65,14 +67,14 @@
 
         <div class="button-container">
           <button
-            class="btn btn-resume-2"
-            onclick="window.open('assets\\resume-example.pdf')">
+            class="btn btn-resume"
+            onclick="window.open('./assets/7-22-24-resume.pdf')">
             My Resume
           </button>
           <button
-            class="btn btn-contact-info-1"
+            class="btn btn-contact-info"
             onclick="location.href='./#contact' ">
-            Contact Info
+            Contact Me
           </button>
         </div>
 
@@ -92,7 +94,7 @@
     </section>
 
     <section id="about">
-      
+
       <p class="section-text-p1">Get to know more</p>
 
       <h1 class="title">About Me</h1>
@@ -100,20 +102,20 @@
       <div class="section-container">
 
         <div class="section-pic-container">
-          
+
           <img
-            src="./assets/about-pic.png"
+            src="./assets/tempearth.jpg"
             alt="profile-picture"
             class="about-pic" />
 
         </div>
 
         <div class="about-container">
-          
+
           <div class="about-details-container">
-            
+
             <div class="details-container">
-              
+
               <img
                 src="./assets/experience.png"
                 alt="experience-icon"
@@ -129,7 +131,7 @@
             </div>
 
             <div class="details-container">
-              
+
               <img
                 src="./assets/education.png"
                 alt="education-icon"
@@ -148,10 +150,17 @@
 
           <div class="text-container">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis quis modi doloribus eius odio ex magni quo voluptate
-              corrupti voluptatibus consequatur blanditiis molestias ullam
-              laudantium eveniet ratione assumenda, incidunt voluptatum.
+              I believe people can master something easier than ever before,
+              using various principles found in current neuroscience research
+              and available productivity books.
+              <br> <br>
+              I see the parallel of the human brain + our behavior via our
+              habits with machine learning and pattern recognition, which is
+              also the backbone of mastery (recognizing patterns in valid
+              environments.)
+              <br> <br>
+              I believe anyone can leverage the power of habits and the
+              "machine" approach of learning to reach mastery in anything.
             </p>
           </div>
 
@@ -172,6 +181,7 @@
       <h1 class="title">Experience</h1>
       <div class="o-container">
         <div class="e-container">
+
           <div class="experience-box-1">
             <h3 class="box-text">Languages + Skills</h3>
             <div class="skills-box">
@@ -183,7 +193,7 @@
               </article>
 
               <div class="bar-container">
-                <p class="percentage">56%</p>
+                <p class="percentage">55%</p>
                 <div class="border">
                   <div class="bar bar-1"></div>
                 </div>
@@ -193,13 +203,13 @@
             <div class="skills-box">
               <article>
                 <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
+                  <h3>HTML</h3>
+                  <p>Novice</p>
                 </div>
               </article>
 
               <div class="bar-container">
-                <p class="percentage">78%</p>
+                <p class="percentage">30%</p>
                 <div class="border">
                   <div class="bar bar-2"></div>
                 </div>
@@ -209,13 +219,13 @@
             <div class="skills-box">
               <article>
                 <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
+                  <h3>CSS</h3>
+                  <p>Novice</p>
                 </div>
               </article>
 
               <div class="bar-container">
-                <p class="percentage">65%</p>
+                <p class="percentage">20%</p>
                 <div class="border">
                   <div class="bar bar-3"></div>
                 </div>
@@ -225,76 +235,97 @@
             <div class="skills-box">
               <article>
                 <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
+                  <h3>MySQL</h3>
+                  <p>Beginner</p>
                 </div>
               </article>
 
               <div class="bar-container">
-                <p class="percentage">50%</p>
+                <p class="percentage">5%</p>
                 <div class="border">
                   <div class="bar bar-4"></div>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="experience-box-2">
             <h3 class="box-text">Work Experience</h3>
-            
-            <div class="skills-box">
+
+            <div class="skills-box skills-box-1">
               <article>
                 <div>
-                  <h3>Company</h3>
-                  <p>Position</p>
+                  <h3>CUNY Tutoring</h3>
+                  <p>Tutor</p>
                 </div>
               </article>
-              <div class="date"> 
-                <p>Jan 2020 - Jan 2022</p>
+
+              <div class="date">
+                <p>Sep 2024 - Present</p>
               </div>
             </div>
 
             <div class="skills-box">
               <article>
                 <div>
-                  <h3>Company</h3>
-                  <p>Position</p>
+                  <h3>Lotus</h3>
+                  <p>ML Intern</p>
                 </div>
               </article>
-
-              <div class="date"> 
-                <p>Jan 2020 - Jan 2022</p>
+              <div class="date">
+                <p>Nov 2023 - Mar 2024</p>
               </div>
             </div>
 
             <div class="skills-box">
               <article>
                 <div>
-                  <h3>Company</h3>
-                  <p>Position</p>
+                  <h3>NYC 311</h3>
+                  <p>Call Rep</p>
                 </div>
               </article>
 
-              <div class="date"> 
-                <p>Jan 2020 - Jan 2022</p>
-              </div>
-            </div>
-
-            <div class="skills-box">
-              <article>
-                <div>
-                  <h3>Company</h3>
-                  <p>Position</p>
-                </div>
-              </article>
-
-              <div class="date"> 
-                <p>Jan 2020 - Jan 2022</p>
+              <div class="date">
+                <p>June 2023 - Sep 2023</p>
               </div>
             </div>
           </div>
+
         </div>
+
+        <div class="e-container-2">
+          <div id="my-pie-chart"></div>
+          
+          <div class="legend">
+            <h3 class="legend-title">Projects Composition</h3>
+            
+            <div class="legend-entry">
+              <div class="mini-color mini-1"></div>
+              <p>Jupyter Notebook - 70%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-2"></div>
+              <p>Python - 10%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-3"></div>
+              <p>CSS - 10%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-4"></div>
+              <p>HTML - 5%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-5"></div>
+              <p>JavaScript - 5%</p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-      <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow" onclick="location.href='./#projects' ">
+      <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow"
+        onclick="location.href='./#projects' ">
     </section>
 
     <section id="projects">
@@ -304,45 +335,81 @@
       <div class="o-p-container">
         <div class="p-container">
           <div class="p-image-container">
-            <img src="./assets/p-image.webp" alt="My Project" class="p-image-1">
+            <img src="./assets/rag.png" alt="My Project" class="p-image-1">
           </div>
 
           <div class="p-title-button-container">
             <h2 class="p-title">RAG System</h2>
             <div class="p-button-container">
-              <div class="p-button"><a class="p-button-1" href="https://github.com/zippy0626/new_rag">Github Link</a></div>
+              <div class="p-button"><a class="p-button-1"
+                  href="https://github.com/zippy0626/new_rag">Github
+                  Link</a></div>
               <!-- <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div></div> -->
             </div>
           </div>
         </div>
         <div class="p-container">
           <div class="p-image-container">
-            <img src="./assets/Golden_cookie.png" alt="My Project" class="p-image-2">
+            <img src="./assets/Golden_cookie.png" alt="My Project"
+              class="p-image-2">
           </div>
 
           <div class="p-title-button-container">
             <h2 class="p-title">Cookie Bot</h2>
             <div class="p-button-container">
-              <div class="p-button"><a class="p-button-1" href="https://github.com/zippy0626/cookiebot">Github Link</a></div>
+              <div class="p-button"><a class="p-button-1"
+                  href="https://github.com/zippy0626/cookiebot">Github
+                  Link</a></div>
               <!-- <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div></div> -->
             </div>
           </div>
         </div>
         <div class="p-container">
           <div class="p-image-container">
-            <img src="./assets/p-image.webp" alt="My Project" class="p-image-3">
+            <img src="./assets/lin-reg.png" alt="My Project" class="p-image-3">
           </div>
 
           <div class="p-title-button-container">
-            <h2 class="p-title">Project 1</h2>
+            <h2 class="p-title">Housing Regression</h2>
             <div class="p-button-container">
-              <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div>
+              <div class="p-button"><a class="p-button-1" href="#">Github
+                  Link</a></div>
               <!-- <div class="p-button"><a class="p-button-1" href="#">Github Link</a></div></div> -->
             </div>
           </div>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow" onclick="location.href='./#contact' ">
+      <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow"
+        onclick="location.href='./#contact' ">
+    </section>
+
+    <section id="contact">
+      <div class="o-c-container">
+
+        <div class="c-text">
+          <p class="section-text-p1">Get in Touch</p>
+          <h1 class="title">Contact Me</h1>
+        </div>
+
+        <div class="c-submit-text-container">
+          <textarea class="email-textarea" placeholder="Type here..."></textarea>
+        </div>
+
+        <div class="error-message"><p>Please write to me!</p></div>
+        <div class="confirm-message"><p>Submitted! Thank you!</p></div>
+        <div class="no-email-message"><p>Please provide an email!</p></div>
+
+        <div class="c-email-submit-container">
+          <div class="email-submit">
+            <input type="email" class="email-field" name="email"
+              placeholder="Your email">
+          </div>
+          <div class="p-button"><a class="p-button-1" onclick="checkEmail()">Submit</a></div>
+        </div>
+
+        <div class="links-container"></div>
+
+      </div>
     </section>
 
     <script src="scripts.js"></script>
