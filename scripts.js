@@ -1,5 +1,7 @@
 // .querySelector() method selects an element from the document. This is set to a variable. 
 
+const { noop } = require("chart.js/helpers");
+
 // The .classList attribute is the list of classes from the element
 
 // .toggle() method adds/appends the class "open", this can be toggled on and off.

@@ -1,5 +1,5 @@
 /* when the screen is less than 1200px wide, the desktop nav closes and hamburger menu is shown instead  */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
     #desktop-nav {
         display: none;
     }
@@ -7,9 +7,96 @@
     #hamburger-nav {
         display: flex;
         justify-content: space-around;
+        margin-top: 2rem;
     }
 
     .hamburger-menu {
         align-self: center;
     }
+
+    #profile, .section-container {
+        display: block;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    section, .section-container {
+        height: fit-content;
+    }
+
+    section {
+        margin: 5rem 5%;
+    }
+    
+    .section-pic-container {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto ;
+    }
+
+    #about {
+        margin-top: 2rem;
+    }
+
+    #profile {
+        margin-bottom: 2rem;
+    }
+
+    .o-p-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c-submit-text-container {
+        width: 350px;
+        height: 400px;
+        margin: 2rem 0rem;
+    }
+
+    .email-textarea {
+        width: 300px;
+        height: 350px;
+    }
+
+    /* scrolling window effect */
+
+    .o-container {
+        width: auto;
+    }
+
+    .e-container { 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+            gap: 2rem;
+        overflow-x: scroll;
+    }
+
+    .experience-box-1 {
+        flex: 0 0 100vw;
+    }
+
+    .experience-box-2 {
+        flex: 0 0 100vw;
+        min-width: 100vw;
+    }
+
+    #my-pie-chart {
+        flex: 0 0 80vw;
+        min-width: 80vw;
+    }
+
+    .legend {
+        flex: 0 0 100vw;
+    }
+
 }
+
+/* @media screen and (max-height: 500px) {
+    section {
+        margin-top: 5rem;
+    }
+} */

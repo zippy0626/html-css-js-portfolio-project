@@ -291,9 +291,36 @@
             </div>
           </div>
 
+          <div id="my-pie-chart"></div>
+            
+          <div class="legend">
+            <h3 class="legend-title">Projects Composition</h3>
+          
+            <div class="legend-entry">
+              <div class="mini-color mini-1"></div>
+              <p>Jupyter Notebook - 70%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-2"></div>
+              <p>Python - 10%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-3"></div>
+              <p>CSS - 10%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-4"></div>
+              <p>HTML - 5%</p>
+            </div>
+            <div class="legend-entry">
+              <div class="mini-color mini-5"></div>
+              <p>JavaScript - 5%</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="e-container-2">
+        <!-- <div class="e-container-2">
           <div id="my-pie-chart"></div>
           
           <div class="legend">
@@ -321,7 +348,7 @@
             </div>
 
           </div>
-        </div>
+        </div> -->
 
       </div>
       <img src="./assets/arrow.png" alt="arrow-icon" class="icon arrow"
@@ -404,7 +431,7 @@
             <input type="email" class="email-field" name="email"
               placeholder="Your email">
           </div>
-          <div class="p-button"><a class="p-button-1" onclick="checkEmail()">Submit</a></div>
+          <div class="p-button"><a class="p-button-1" onclick="checkEmail(), checkValidEmail()">Submit</a></div>
         </div>
 
         <div class="links-container"></div>
